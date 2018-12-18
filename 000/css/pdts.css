@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Basic');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Signika');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+
+.container-fluid{
+  width: 95%;
+  height: 600px;
+  margin-top: 100px;
+  padding: 0;
+}
+
+.container-fluid div{
+  float: left;
+}
+
+.container-filters{
+  width: 18%;
+  margin-right: 3%;
+  border: 1px solid rgb(200,220,220);
+}
+
+.container-products{
+  width: 79%;
+  padding: 10px 0;
+  border: 1px solid rgb(200,220,220);
+}
+
+.list-products{
+  padding: 0;
+  margin: 0;
+}
+
+.list-products .item-product{
+  width: 23.8%;
+  margin: 0 5px 5px 5px;
+  float: left;
+  list-style: none;
+}
+
+.content-product{
+  width: 100%;
+  height: 350px;
+}
+
+.img-product{
+  width: 95%;
+  margin-left: 4.5%;
+}
+
+.img-product img{
+  width: 95%;
+  height: 220px;
+}
+
+.name-shoe{
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(0,5,0);
+	font-weight: 600;
+}
+
+
+.price-shoe{
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Basic', sans-serif;
+	color: rgb(215,125,0);
+	font-weight: 600;
+}
+
+.ide-shoe{
+  width: 60%;
+  margin-top: 10px;
+  margin-left: 20%;
+	padding: 8px 0;
+  background-color: rgb(34,68,238);
+  border-radius: 5px 5px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.ide-shoe a{
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Basic', sans-serif;
+	text-decoration: none;
+}
+
+.head{
+	width: 100%;
+	height: 40px;
+	padding-top: 5px;
+	text-align: center;
+	color: #fff;
+	font-size: 22px;
+	font-family: 'Varela Round', sans-serif;
+	background-color: rgb(10,94,184);
+}
+
+.content-filters{
+  width: 100%;
+}
+
+.list-odd{
+  width: 100%;
+	padding-top: 5px;
+	padding-bottom: 6px;
+	font-size: 17px;
+	background-color: rgb(44,170,226);
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	font-weight: normal;
+	color: #fff;
+}
+
+.price{
+	width: 100%;
+	height: 70px;
+	margin: 0;
+	padding: 0 20px;
+	padding-top: 10px;
+	font-size: 17px;
+	font-weight: 900px;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+}
+
+.list-tallas{
+	width: 100%;
+	height: 120px;
+	margin: 0;
+	padding: 10px 10px;
+}
+
+.list-tallas .content {
+	list-style-type: none;
+}
+
+.list-tallas .content .talla{
+	float: left;
+	display: block;
+	padding: 12px 14px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border: 1px solid rgb(200,200,200);
+	color: #000;
+	text-decoration: none;
+	transition: all .4s ease-in;
+	cursor: pointer;
+}
+
+.active{
+	background-color: rgb(245,170,30);
+}
+
+.list-colors{
+	width: 100%;
+	height: 120px;
+	margin: 0;
+	padding: 10px 10px;
+}
+
+.list-colors .content {
+	list-style-type: none;
+}
+
+.list-colors .content .color{
+	display: block;
+	float: left;
+	width: 46px;
+	height: 46px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	border-radius: 5px;
+	border: 1px solid rgb(200,200,200);
+	color: #000;
+	text-decoration: none;
+	transition: all .4s ease-in;
+	cursor: pointer;
+}
+
+.list-acabado{
+	width: 100%;
+	margin: 0;
+	padding: 0 15px;
+	padding-top: 10px;
+}
+
+.list-acabado .content{
+	list-style-type: none;
+}
+
+.list-acabado .content .acabado{
+	display: block;
+	padding-bottom: 5px;
+	color: #000;
+	text-decoration: none;
+	transition: all .3s;
+	cursor: pointer;
+}
+
+.list-marcas{
+	width: 100%;
+	margin: 0;
+	padding: 0 15px;
+	padding-top: 10px;
+}
+
+.list-marcas .content{
+	list-style-type: none;
+}
+
+.list-marcas .content .marca{
+	display: block;
+	padding-bottom: 5px;
+	color: #000;
+	text-decoration: none;
+	transition: all .3s;
+	cursor: pointer;
+}
+
+.active-a{
+	color: rgb(80,50,140);
+	font-weight: 900;
+}
+
+.price-range{
+	margin: auto;
+	margin-top: -10px;
+  position: relative;
+}
+
+.ui-slider{
+    width: 100%;
+    height: 13px;
+}
+/*Para definir el color de fondo del rango seleccionado*/
+
+.ui-slider .ui-slider-range{
+    background-color: rgb(190,200,200);
+}
+
+.ui-slider .ui-slider-handle{
+    width: 19px;
+    height: 19px;
+    margin-top: 1px;
+    outline: none;
+}
+
+/*Para definir el estilo del botón de desplazamiento*/
+.ui-slider .ui-slider-handle:hover{
+    cursor: pointer;
+    background-color: rgb(248,152,29);
+    border: 1px solid rgb(248,152,29);
+}
+
+.ui-slider-handle:active {
+    background-color: #fff;
+}

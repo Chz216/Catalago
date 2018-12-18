@@ -18,11 +18,17 @@
   height: 350px;
   margin-right: 3%;
   background-color: #9974aa;
+  border: 1px solid rgb(235,235,235);
 }
 
 .container-products{
   width: 79%;
   padding: 10px 0;
+  border: 1px solid rgb(235,235,235);
+}
+
+bodu{
+  background-color: #000;
 }
 
 .list-products{

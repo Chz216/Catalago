@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.wrapper-navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0,0.5);
+  z-index: 1;
+}
+
+.wrapper-form{
+  width: 100%;
+	position: relative;
+	background-color: rgb(10,40,90);
+	padding: 25px 60px;
+  display: none;
+}
+
+.search-form{
+	position: relative;
+	padding-left: 25px;
+}
+
+.search-form:before{
+	content: "\f002";
+	font-weight: 600;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	color: #fff;
+	font-family: Font Awesome\ 5 Free;
+}
+
+.search-form ::placeholder{
+	color: #fff;
+}
+
+.search-form .search-txt{
+	width: 100%;
+	height: 25px;
+	background: none;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Yantramanav', sans-serif;
+}
+
+.close{
+	color: #fff;
+	opacity: 1;
+	font-size: 18px;
+	position: absolute;
+	top: 4px;
+  right: -20px;
+	cursor: pointer;
+}
+.close .fa-times:hover{
+	color: #fff;
+}
+
+.search:before{
+  content: "\f002";
+	font-weight: 600;
+	font-family: Font Awesome\ 5 Free;
+}
+
+.logo img{
+  float: left;
+  width: 210px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.navbar-default{
+  float: right;
+  margin-right: 20px;
+}
+
+.navbar-nv{
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-nv .nv-item{
+  list-style: none;
+  position: relative;
+}
+
+.navbar-nv .nv-item:hover .sub-nav{
+  display: block;
+}
+
+.navbar-nv .nv-item .nv-link{
+  line-height: 80px;
+  padding: 0 15px;
+  font-family: 'Niramit', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.4s ease-in;
+}
+
+.navbar-nv .nv-item:hover .nv-link{
+  color:rgb(160,20,15);
+  font-weight: 900;
+}
+
+.sub-nav{
+  position: absolute;
+  padding: 0;
+  left: 0;
+  background-color: rgb(230,230,230);
+  display: none;
+}
+
+.sub-nav .sub-item{
+  width: 300px;
+  padding: 15px 25px;
+  display: block;
+  list-style: none;
+}
+
+.sub-nav .sub-item .sub-link{
+  padding: 0 10px;
+  text-decoration: none;
+  font-size: 19px;
+  font-family: 'Niramit', sans-serif;
+  color: rgb(50,100,110)
+}
+
+.sub-nav .sub-item:hover{
+  background-color: rgb(220,220,220);
+}
+
+.menu-toggle{
+  color: #fff;
+  float: right;
+  margin-right: 20px;
+  line-height: 75px;
+  cursor: pointer;
+  display: none;
+  font-size: 26px;
+}
+
+.carousel-item{
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(228,230,235);
+}
+
+.img-block{
+	width: 100%;
+	height: 100vh;
+}
+
+.carousel-caption{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(5,20,80,.2);
+	color: rgb(255,255,255);
+	font-family: 'Poppins', sans-serif;
+}
+
+.carousel-caption h2{
+	font-size: 32px;
+}
+
+.carousel-caption h4{
+	font-size: 22px;
+}
+
+.fadeInUp, .fadeInLeft{
+ 	animation-delay: 0.9s;
+}
+
+.fadeInRight, .fadeInDown{
+  	animation-delay: 1.5s;
+}
+
+.circle-right, .circle-left{
+	width: 50px;
+	height: 50px;
+	padding-top: 5px;
+	border-radius: 50%;
+	background-color: rgb(210,210,210);
+	position: absolute;
+	top: 50%;
+}
+
+.fa-angle-right, .fa-angle-left{
+	font-size: 40px;
+	color: rgb(134,10,10);
+}
+
+.circle-left{
+	padding-right: 5px;
+}
+
+.circle-right{
+	padding-left: 5px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .menu-toggle{
+    display: block;
+  }
+  .logo img{
+    width: 180px;
+  }
+  .navbar-default{
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 65px);
+    background-color: rgb(130,15,10);
+    top: 75px;
+    left: -100%;
+    transition: 0.5s;
+    overflow-y: scroll;
+  }
+  .navbar-default.right{
+    left: 0;
+  }
+  .navbar-nv{
+    display: block;
+  }
+  .carousel-item{
+    width: 100%;
+    height: 60vh;
+  }
+  .carousel-item img{
+  	width: 100%;
+    height: 60vh;
+  	background-color: rgb(228,230,235);
+  }
+  .carousel-caption{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(5,20,80,.2);
+  	color: rgb(255,255,255);
+  	font-family: 'Poppins', sans-serif;
+  }
+
+  .carousel-caption h2{
+  	font-size: 20px;
+  }
+  .carousel-caption h4{
+  	font-size: 14px;
+  }
+
+  .circle-right, .circle-left{
+  	width: 35px;
+  	height: 35px;
+  	border-radius: 50%;
+  	background-color: rgb(210,210,210);
+  	position: absolute;
+  	top: 50%;
+  }
+
+  .fa-angle-right, .fa-angle-left{
+  	font-size: 25px;
+  	color: rgb(134,10,10);
+  }
+
+  .circle-left{
+  	padding-right: 2px;
+  }
+
+  .circle-right{
+  	padding-left: 2px;
+  }
+
+}

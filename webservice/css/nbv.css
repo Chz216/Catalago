@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+header{
+  width: 100%;
+  position: fixed;
+  background-color: rgb(130,0,5);
+  z-index: 1000;
+}
+
+.wrapper-form{
+  width: 100%;
+	position: relative;
+	background-color: rgb(10,40,90);
+	padding: 15px 60px;
+  display: none;
+}
+
+.search-form{
+	position: relative;
+	padding-left: 25px;
+}
+
+.search-form:before{
+	content: "\f002";
+	font-weight: 600;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	color: #fff;
+	font-family: Font Awesome\ 5 Free;
+}
+
+.search-form ::placeholder{
+	color: #fff;
+}
+
+.search-form .search-txt{
+	width: 98%;
+	height: 25px;
+	background: none;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Yantramanav', sans-serif;
+}
+
+.close{
+	color: #fff;
+	opacity: 1;
+	font-size: 18px;
+	position: absolute;
+	top: 4px;
+  right: 0;
+	cursor: pointer;
+}
+.close .fa-times:hover{
+	color: #fff;
+}
+
+.navbar-default{
+  width: 100%;
+  height: 80px;
+  padding: 5px 60px;
+}
+
+.logo{
+  width: 210px;
+  height: 70px;
+  float: left;
+}
+
+.img-logo{
+  width: 210px;
+  height: 70px;
+}
+
+.wrapper{
+  float: right;
+}
+
+.navbar-nv{
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-nv .nv-item{
+  list-style: none;
+}
+
+.navbar-nv .nv-item .nv-link{
+  line-height: 70px;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+  font-family: 'Niramit', sans-serif;
+}
+
+.navbar-nv .nv-item:hover .nv-link{
+  color: #fff;
+}
+
+.search:before{
+  content: "\f002";
+	font-weight: 600;
+	font-family: Font Awesome\ 5 Free;
+}

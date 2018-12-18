@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Basic');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Signika');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+
+.container-fluid{
+  width: 90%;
+  height: 600px;
+  padding: 0;
+}
+
+.container-fluid div{
+  float: left;
+}
+
+.container-filters{
+  width: 18%;
+  height: 350px;
+  margin-right: 3%;
+  background-color: #9974aa;
+}
+
+.container-products{
+  width: 79%;
+  padding: 10px 0;
+}
+
+.list-products{
+  padding: 0;
+  margin: 0;
+}
+
+.list-products .item-product{
+  width: 24.5%;
+  height: 360px;
+  margin: 0 1px 0 1px;
+  float: left;
+  list-style: none;
+}
+
+.img-product{
+  width: 100%;
+}
+
+.img-product img{
+  width: 100%;
+}
+
+.name-shoe{
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(0,5,0);
+	font-weight: 600;
+}
+
+
+.price-shoe{
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Basic', sans-serif;
+	color: rgb(215,125,0);
+	font-weight: 600;
+}
+
+.ide-shoe{
+  width: 60%;
+  margin-top: 10px;
+  margin-left: 20%;
+	padding: 8px 0;
+  background-color: rgb(34,68,238);
+  border-radius: 5px 5px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.ide-shoe a{
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Basic', sans-serif;
+	text-decoration: none;
+}
+
+/*.col-md-3{
+  height: 300px;
+  background: #0a04b8;
+}
+
+.col-md-9{
+  height: 300px;
+  padding: 0;
+  background: #1ae4b1;
+}
+
+.container-right{
+  width: 100%;
+  height: 150px;
+  background-color: #970046;
+}
+
+.list-products{
+  margin: 0;
+  padding: 0;
+}
+
+.list-products .item-product{
+  list-style: none;
+  float: left;
+  width: 24%;
+  height: 300px;
+  background-color: #988044;
+  margin: 5px 5px 0 5px;
+}

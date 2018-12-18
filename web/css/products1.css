@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Basic');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Signika');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+	
+
+.content-shoes{
+	width: 100%;
+	position: absolute;
+	top: 90px;
+}
+
+.breadcrumb{
+	padding-top: 5px;
+	padding-left: 55px;
+	border-radius: 0;
+	background-color: #fff;
+}
+
+.content-box{
+	width: 95%;
+	margin: 0 auto;
+}
+
+.col-filters{
+	height: 700px;
+	padding: 0;
+	border: 1px solid rgb(200,200,200);
+}
+
+.col-products{
+	padding-left: 20px;
+	padding-right: 2px;
+}
+
+.col-products .container-fluid{
+	height: 900px;
+	padding: 0;
+	padding-top: 5px;
+	padding-left: 5px;
+	border: 1px solid rgb(200,200,200);
+}
+
+.col-products .detail-shoes{
+	float: left;
+}
+
+.col-products .detail-shoes{
+	width: 275px;
+	height: 450px;
+	margin-right: 8px;
+}
+
+.detail-shoes img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: 250px;
+}
+
+.detail-shoes .name-shoe{
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(0,5,0);
+	font-weight: 600;
+}
+
+.detail-shoes .price-shoe{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Basic', sans-serif;
+	color: rgb(215,125,0);
+	font-weight: 600;
+}
+
+.ide-shoe{
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+	width: 200px;
+	padding: 8px 0;
+  	background-color: rgb(34,68,238);
+  	border-radius: 5px 5px;
+  	transition: 0.3s;
+  	text-align: center;
+}
+
+.ide-shoe a{
+	color: #fff;
+	font-size: 19px;
+	font-family: 'Basic', sans-serif;
+	text-decoration: none;	
+}
+
+.title span{
+	display: block;
+	padding: 8px 0;
+	font-size: 18px;
+	background-color: rgb(0,84,164);
+	color: #fff;
+	text-align: center;
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+.list-odd{
+	padding-top: 5px;
+	padding-bottom: 6px;
+	font-size: 15px;
+	background-color: rgb(44,170,226);
+	text-align: center;
+	font-family: 'Signika', sans-serif;
+	color: #fff;
+	font-weight: 500;
+}
+
+.list-tallas{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	margin: 0;
+	padding: 0 12px;
+}
+
+.list-tallas li{
+	list-style-type: none;
+}
+
+.list-tallas li a{
+	float: left;
+	display: block;
+	padding: 10px 13px;
+	margin: 0 5px 3px 0;
+	background-color: #020;
+}
+
+.ui-slider{
+    width: 185px;
+    height: 14px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+    background-color: rgb(225,225,225);
+}
+/*Para definir el color de fondo del rango seleccionado*/
+.ui-slider .ui-slider-range{
+    background-color: rgb(170,170,170);
+}
+
+.ui-slider .ui-slider-handle{
+    width: 16px;
+    height: 16px;
+    margin-top: 2.5px;
+    outline: none;
+}
+
+/*Para definir el estilo del botón de desplazamiento*/
+.ui-slider .ui-slider-handle:hover{
+    cursor: pointer;
+    background-color: rgb(248,152,29);
+    border: 1px solid rgb(248,152,29);
+}
+
+.ui-slider-handle:active {
+    background-color: #fff;
+}
+
+.range span{
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Mada');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.header-content{
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
+.search{
+	background-color: rgb(10,40,90);
+	padding: 10px 70px;
+	display: none;
+}
+
+.search-form{
+	position: relative;
+	padding-left: 25px;
+}
+
+.search-form:before{
+	content: "\f002";
+	font-weight: 600;
+	position: absolute;
+	top: 0;
+	left: -7px;
+	color: #fff;
+	font-family: Font Awesome\ 5 Free;
+}
+
+.search-form ::placeholder{
+	color: #fff;
+}
+
+.search-form input{
+	width: 98%;
+	height: 25px;
+	background: none;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 15px;
+	font-family: 'Oxygen', sans-serif;
+}
+
+.close{
+	color: #fff;
+	opacity: 1;
+	font-size: 18px;
+	position: absolute;
+	top: 3px;
+	right: -5px;
+	cursor: pointer;
+}
+.close .fa-times:hover{
+	color: #fff;
+}
+
+.search-icon{
+	position: absolute;
+	top: 20px;
+	right: 5px;
+}
+
+.wrapper-navbar{
+	width: 100%;
+	height: 80px;
+	padding: 5px 60px;
+	background-color: rgb(125,10,25);
+}
+
+.wrapper-navbar .logo{
+	float: left;
+}
+
+.wrapper-navbar .logo img{
+	width: 220px;
+	height: 70px;
+}
+
+.navbar-default{
+	margin-top: 25px;
+	float: right;
+}
+
+
+.navbar-nv{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.navbar-nv .nv-item{
+	list-style-type: none;
+	position: relative;
+}
+
+.dropdown-submenu{
+	min-width: 280px;
+	position: absolute;
+	top: 50px;
+	background-color: rgb(235,235,235);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.navbar-nv .nv-item:hover .dropdown-submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+.navbar-nv .nv-item .nv-link{
+	display: block;
+	padding: 0 15px;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Mada', sans-serif;
+	font-size: 19px;
+	transition: all .3s ease-in-out;
+}
+
+.sub-menu{
+	padding: 0;
+	list-style-type: none;
+}
+
+.sub-menu .sub-item .sub-link{
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+	font-size: 15px;
+}
+
+.sub-menu .sub-item:hover .sub-link{
+	background-color: rgb(0,0,0,.2);
+}
+
+.icon-search{
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	position: relative;
+	background-color: rgb(235,105,10);
+}
+
+.icon-search i{
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	font-size: 19px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.footer-content{
+  width: 100%;
+  height: 180px;
+  padding: 0 60px;
+  margin-top: 25px;
+  background-color: rgb(5,10,30);
+}
+
+.footer-container{
+	width: 100%;
+	height: 180px;
+	background-color: #aa8745;
+}
+
+#foot h4{
+  padding-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-menu{
+	list-style-type: none;
+}
+
+.footer-menu .footer-item .footer-link{
+	display: block;
+	padding: 5px 0;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Mada', sans-serif;
+	text-decoration: none;
+}
+
+.email:before{
+    content: '\f0e0';
+    position: absolute;
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    color: #fff;
+    font-size: 20px;
+    left: 60px; 
+}
+
+.cell-phone:before{
+    content: '\f3cd';
+    position: absolute;
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    color: #fff;
+    font-size: 20px;
+    left: 63px;
+}
+
+.location:before{
+    content: '\f3c5';
+    position: absolute;
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    color: #fff;
+    font-size: 20px;
+    left: 61px;
+}
+
+.icon-fa{
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: #3b5999;
+  border-radius: 3px;
+  transition: all .2s ease-in; 
+  margin-left: 200px;
+}
+
+.icon-fa:hover{
+  border-radius: 50%;
+  border: none;
+  background-color: #3b5999;
+}
+
+.fa-facebook-f{
+  position: absolute;
+  color: #fff;
+  font-size: 26px;
+  top: 6px;
+  left: 14px;
+}
+
+#foot p{
+  padding: 0 30px;
+  color: #fff;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.img-foot img{
+  width: 195px;
+  height: 60px;
+}

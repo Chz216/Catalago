@@ -272,7 +272,7 @@
 
   background-color: #055440;
 }
-
+body{background-color: #000;}
 
 @media screen and (max-width: 1199.98px) {
   .menu-toggle{
@@ -297,11 +297,11 @@
   .navbar-nv{
     display: block;
   }
-  .nvb-nav .nv-item.toggle .sub-nav{
+  .navbar-nv .nv-item.toggle .sub-nav{
 		position: relative;
 		background-color: #003e6f;
 	}
-	.nvb-nav .nv-item:hover .sub-nav{
+	.navbar-nv .nv-item:hover .sub-nav{
 		display: none;
 	}
 	.nvb-nav .nv-item.toggle .sub-nav{

@@ -26,7 +26,7 @@ class funciones {
         <ul class="navbar-nv">
           <li class="nv-item"><a href="index.php" class="nv-link">Inicio</a></li>
           <li class="nv-item">
-            <a class="nv-link">Dama</a>
+            <a href="products.php" class="nv-link">Dama</a>
             <ul class="sub-nav">
               <li class="sub-item"><a href="#" class="sub-link">Zapatos</a></li>
               <li class="sub-item"><a href="#" class="sub-link">Tenis</a></li>

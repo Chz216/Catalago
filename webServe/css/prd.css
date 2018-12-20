@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Niramit|Poppins|Varela Round|Yantramanav');
+
+
 .container-products{
   width: 100%;
   margin-top: 100px;
@@ -18,26 +21,14 @@
   margin-right: 2%;
 }
 
-.head{
+.block-title{
 	width: 100%;
-	height: 40px;
-	padding-top: 5px;
+  padding: 5px;
 	text-align: center;
 	color: #fff;
 	font-size: 22px;
 	font-family: 'Varela Round', sans-serif;
 	background-color: rgb(10,94,184);
-}
-
-.list-odd{
-	padding-top: 5px;
-	padding-bottom: 6px;
-	font-size: 17px;
-	background-color: rgb(44,170,226);
-	text-align: center;
-	font-family: 'Cabin', sans-serif;
-	font-weight: normal;
-	color: #fff;
 }
 
 .price{
@@ -52,114 +43,81 @@
 	text-align: center;
 }
 
-.list-tallas{
-	width: 100%;
-	height: 120px;
-	margin: 0;
-	padding: 10px 15px;
+.list-odd{
+  width: 100%;
+  padding: 3px;
+	font-size: 16px;
+	background-color: rgb(44,170,226);
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	font-weight: normal;
+	color: #fff;
 }
 
-.list-tallas .content {
+.wrapper-odd{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  height: auto;
+  overflow: hidden;
+}
+
+.wrapper-odd .list-tallas, .list-colors{
+	margin: 0;
+  padding: 0;
+}
+
+.list-tallas .item-t, .list-colors .item-c{
+  width: 25%;
+  float: left;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.list-tallas .item-t .talla, .list-colors .item-c .color{
+  display: block;
+  width: 90%;
+  height: 48px;
+  padding-top: 14px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid rgb(210,210,210);
+  border-radius: 5px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.list-tallas .item-t:hover .talla, .list-colors .item-c:hover .color{
+  background-color: rgb(5,130,200);
+  color: #fff;
+}
+
+.list-acabado, .list-marcas{
+	width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.list-acabado .item-a, .list-marcas .item-m{
 	list-style-type: none;
 }
 
-.list-tallas .content .talla{
-	float: left;
-	display: block;
-	padding: 13px 15px;
-	margin-right: 10px;
-	margin-bottom: 5px;
-	border-radius: 5px;
-	border: 1px solid rgb(200,200,200);
-	color: #000;
-	text-decoration: none;
-	transition: all .4s ease-in;
-	cursor: pointer;
-}
-
-.active{
-	background-color: rgb(245,170,30);
-}
-
-.list-colors{
-	width: 100%;
-	height: 120px;
-	margin: 0;
-	padding: 10px 15px;
-}
-
-.list-colors .content {
-	list-style-type: none;
-}
-
-.list-colors .content .color{
-	display: block;
-	float: left;
-	width: 49px;
-	height: 49px;
-	margin-right: 10px;
-	margin-bottom: 8px;
-	border-radius: 5px;
-	border: 1px solid rgb(200,200,200);
-	color: #000;
-	text-decoration: none;
-	transition: all .4s ease-in;
-	cursor: pointer;
-}
-
-.list-acabado{
-	width: 100%;
-	margin: 0;
-	padding: 0 15px;
-	padding-top: 10px;
-}
-
-.list-acabado .content{
-	list-style-type: none;
-}
-
-.list-acabado .content .acabado{
+.list-acabado .item-a .acabado, .list-marcas .item-m .marca{
 	display: block;
 	padding-bottom: 5px;
 	color: #000;
 	text-decoration: none;
 	transition: all .3s;
 	cursor: pointer;
-}
-
-.list-marcas{
-	width: 100%;
-	margin: 0;
-	padding: 0 15px;
-	padding-top: 10px;
-}
-
-.list-marcas .content{
-	list-style-type: none;
-}
-
-.list-marcas .content .marca{
-	display: block;
-	padding-bottom: 5px;
-	color: #000;
-	text-decoration: none;
-	transition: all .3s;
-	cursor: pointer;
-}
-
-.active-a{
-	color: rgb(80,50,140);
-	font-weight: 900;
-}
-
-.price-range{
-  position: absolute;
 }
 
 .ui-slider{
     position: relative;
     z-index: 5;
-
 }
 /*Para definir el color de fondo del rango seleccionado*/
 
@@ -183,6 +141,18 @@
 
 .ui-slider-handle:active {
     background-color: #fff;
+}
+
+.filter-box{
+  width: 50%;
+  padding: 2px 20px;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: rgb(10,94,184);
+  display: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .products{
@@ -274,12 +244,14 @@
     padding: 10px;
   	font-size: 13px;
   }
+  .list-tallas .item-t .talla, .list-colors .item-c .color{
+    width: 95%;
+    height: 38px;
+    padding-top: 8px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
-  .filters{
-    display: none;
-  }
   .container-products{
     margin-top: 76px;
   }
@@ -287,13 +259,21 @@
     width: 95%;
   }
   .filters{
-    width: 100%;
-    height: 200px;
+    position: absolute;
+    width: 95%;
+    background: #fff;
     border: 1px solid rgb(180,210,230);
-    margin-right: 2%;
+    display: none;
+  }
+  .filter-box{
+    display: block;
+  }
+  .toggle-box{
+    display: block;
   }
   .products{
     width: 100%;
+    margin-top: 15px;
   }
   .img-prod img{
     width: 90%;
@@ -305,6 +285,9 @@
   }
   .price-shoe{
   	font-size: 19px;
+  }
+  .list-tallas .item-t, .list-colors .item-c{
+    width: 8%;
   }
 }
 
@@ -323,10 +306,30 @@
   .filters{
     display: none;
   }
+  .filters{
+    position: absolute;
+    width: 95%;
+    background: #fff;
+    border: 1px solid rgb(180,210,230);
+    display: none;
+  }
+  .filter-box{
+    display: block;
+  }
+  .toggle-box{
+    display: block;
+  }
+
   .img-prod{
     width: 50%;
     height: 100%;
     float: left;
+  }
+  .list-tallas .item-t, .list-colors .item-c{
+    width: 13%;
+    float: left;
+    margin-bottom: 10px;
+    list-style: none;
   }
   .img-prod img{
     width: 95%;

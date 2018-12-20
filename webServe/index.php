@@ -12,7 +12,7 @@ $function = new funciones();
   <title>El Reventón</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/car.css">
+  <link rel="stylesheet" href="css/car0.css">
 </head>
 <body>
 

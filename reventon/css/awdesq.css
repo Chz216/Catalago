@@ -1,0 +1,23 @@
+nav{
+  background-color: #f00;
+  
+  width: 100%;
+}
+
+nav>ul{
+  float: right;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+}
+
+.logo{
+  width: 150px;
+  height: auto;
+}
+.logo img {
+  width: 160px;
+  height: 60px;
+}

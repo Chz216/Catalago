@@ -1,0 +1,21 @@
+.logo img{
+  width: 200px;
+  height: 50px;
+}
+
+.navbar{
+  color: white;
+  background-color: #000;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: red;
+}
+
+.navbar .navbar-toggler{
+ border-color: white;
+}
+
+.navbar .icon-bar{
+  color: blue;
+}

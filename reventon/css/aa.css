@@ -1,0 +1,49 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+/*Inicio del Navbar*/
+.logo{
+  width: 100%;
+  height: 90px;
+  padding-top: 10px;
+  background-color: blue;
+}
+
+.logo img{
+  width: auto;
+  height: 65px;
+}
+
+nav{
+  width: 100%;
+  height: 160px;
+  background-color: rgb(255,20,20,0.9);
+  overflow: hidden;
+}
+
+ul{
+  float: right;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 15px;
+}
+
+ul li:hover{
+  transition: .5s;
+  background-color: rgb(255,255,255,0.5);
+  border-radius: 5px 5px;
+}
+
+.navs li a{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 18px;
+}

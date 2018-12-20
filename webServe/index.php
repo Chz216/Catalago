@@ -120,28 +120,7 @@ $function = new funciones();
   </div>
 </section>
 <footer>
-  <div class="wrapper-foot">
-    <div class="row">
-      <div class="col-md-6 col-sm">
-        <div class="about">
-          <h4>Contactanos</h4>
-          <div class="inf-foot">
-            <ul class="list-foot">
-              <li class="item-foot"><a class="link-foot"><i class="fas fa-map-marker-alt"></i> Dirección: ljlsjfkslkjflkfjlksjlkd</a></li>
-              <li class="item-foot"><a class="link-foot"><i class="fas fa-mobile-alt"></i> Telefono: (044) 238-188-9004</a></li>
-              <li class="item-foot"><a class="link-foot"><i class="far fa-envelope"></i> Email: elreventon@gmail.com</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm">
-        <div class="media-socials">
-          <h4>Redes Sociales</h4>
-          <div class="icon"><a href="https://www.facebook.com/zapateriaselreventon/"><i class="fab fa-facebook-f"></i></a></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php echo $function->footer(); ?>
 </footer>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>

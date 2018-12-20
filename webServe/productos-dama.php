@@ -94,7 +94,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -110,7 +110,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -126,7 +126,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -142,73 +142,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="content-prod">
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -226,7 +160,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -242,7 +176,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -258,7 +192,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -274,73 +208,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="content-prod">
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
-              </div>
-            </div>
-          </li>
-          <li class="item-prod">
-            <div class="img-prod">
-              <img src="img/dolo.jpg" alt="">
-            </div>
-            <div class="wrapper-prod">
-              <div class="name-shoe">
-                <span>Tenis Casual Para Toda Ocasión</span>
-              </div>
-              <div class="price-shoe">
-                <span>$199.00</span>
-              </div>
-              <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -358,7 +226,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -374,7 +242,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -390,7 +258,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -406,7 +274,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -424,7 +292,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -440,7 +308,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -456,7 +324,7 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>
@@ -472,7 +340,139 @@ $function = new funciones();
                 <span>$199.00</span>
               </div>
               <div class="ide-shoe">
-                <a id="active" href="details.php?modelo='.$serv['Id_producto'].'">Ver Detalles</a>
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="content-prod">
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="content-prod">
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
+              </div>
+            </div>
+          </li>
+          <li class="item-prod">
+            <div class="img-prod">
+              <img src="img/dolo.jpg" alt="">
+            </div>
+            <div class="wrapper-prod">
+              <div class="name-shoe">
+                <span>Tenis Casual Para Toda Ocasión</span>
+              </div>
+              <div class="price-shoe">
+                <span>$199.00</span>
+              </div>
+              <div class="ide-shoe">
+              <a id="active" href="detalles.php">Ver Detalles</a>
               </div>
             </div>
           </li>

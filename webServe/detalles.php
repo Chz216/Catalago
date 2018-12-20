@@ -13,21 +13,44 @@ $function = new funciones();
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="css/car0.css">
+  <link rel="stylesheet" href="css/det.css">
 </head>
 <body>
   <header>
     <?php echo $function->menu(); ?>
   </header>
 
-  <footer>
-    <?php echo $function->footer(); ?>
-  </footer>
+  <section class="detalles">
+		<div class="container-fluid">
+			<div class="container-img" id="img-small">
+				<div class="img-shoe">
+					<img src="img/BA7666_04_standard.jpg" alt="">
+				</div>
+				<div class="img-shoe">
+					<img src="img/BA7666_04_standard.jpg" alt="">
+				</div>
+				<div class="img-shoe">
+					<img src="img/hs.jpg" alt="">
+				</div>
+				<div class="img-shoe">
+					<img src="img/offers.jpg" alt="">
+				</div>
+			</div>
+			<div class="img-full" id="img-full">
+				<img src="img/BA7666_04_standard.jpg" alt="">
+			</div>
+			<div class="description">
+
+			</div>
+		</div>
+	</section>
 
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/img.js"></script> 
   <script type="text/javascript">
   $(document).ready(function() {
     $('.icon-search').click(function() {

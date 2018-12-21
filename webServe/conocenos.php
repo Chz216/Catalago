@@ -13,7 +13,7 @@ $function = new funciones();
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="css/car0.css">
-  <link rel="stylesheet" href="css/abt00.css">
+  <link rel="stylesheet" href="css/abt0.css">
 </head>
 <body>
 
@@ -30,9 +30,9 @@ $function = new funciones();
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
-  <script src="js/mpa.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRa4ltVvE0m5WkyIj0y0EecJDwPkU2aOs&callback=initMap"></script>
   <script src="js/markerclusterer.js"></script>
+  <script src="js/maa.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRa4ltVvE0m5WkyIj0y0EecJDwPkU2aOs&callback=initMap"></script>
   <script src="js/form.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {

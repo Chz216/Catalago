@@ -2,7 +2,6 @@
 include_once 'php/functions.php';
 $function = new funciones();
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,46 +10,56 @@ $function = new funciones();
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/jquery.exzoom.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="css/car0.css">
-  <link rel="stylesheet" href="css/det.css">
+  <link rel="stylesheet" href="css/det00.css">
 </head>
 <body>
   <header>
     <?php echo $function->menu(); ?>
   </header>
+  <div class="wrapper-details">
+    <div class="wrapper-img">
+      <div class="container-img-small">
+        <div class="img-small"><img src="img/dolo.jpg" alt=""></div>
+        <div class="img-small"><img src="img/dolo.jpg" alt=""></div>
+      </div>
+      <div class="container-img-big">
+        <div class="exzoom" id="exzoom">
+          <div class="exzoom_img_box">
+            <ul class='exzoom_img_ul'>
+              <li>
+                <img src="img/dolo.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <div class="wrapper-description">
 
-  <section class="detalles">
-		<div class="container-fluid">
-			<div class="container-img" id="img-small">
-				<div class="img-shoe">
-					<img src="img/BA7666_04_standard.jpg" alt="">
-				</div>
-				<div class="img-shoe">
-					<img src="img/BA7666_04_standard.jpg" alt="">
-				</div>
-				<div class="img-shoe">
-					<img src="img/hs.jpg" alt="">
-				</div>
-				<div class="img-shoe">
-					<img src="img/offers.jpg" alt="">
-				</div>
-			</div>
-			<div class="img-full" id="img-full">
-				<img src="img/BA7666_04_standard.jpg" alt="">
-			</div>
-			<div class="description">
+        </div>
+    </div>
+  </div>
 
-			</div>
-		</div>
-	</section>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="js/jquery.exzoom.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+      $("#exzoom").exzoom({
+
+      });
+
+    });
+  </script>
   <script src="js/form.js"></script>
-  <script src="js/img.js"></script> 
+  <script src="js/img.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     $('.icon-search').click(function() {
@@ -78,6 +87,6 @@ $function = new funciones();
       $('.filters').toggleClass('toggle-box');
     });
   });
-  </script>
+</script>
 </body>
 </html>

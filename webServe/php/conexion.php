@@ -16,7 +16,7 @@ class database {
       echo 'ERROR: ' . $e->getMessage();//mensaje por si surge un error
     }
   }
-//cierra la conexion
+  //cierra la conexion
   function CerrarConexion() {
     $this->pdo = null;
   }
@@ -35,7 +35,7 @@ class database {
     $this->CerrarConexion();
   }
 
-   function showShoes(){
+  function showShoes(){
     $sql = $this->pdo->prepare("SELECT a.Nom_producto, a.Precio, a.imagen FROM articulo AS a");
     if ($sql->execute(array(1))) {
       return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -43,13 +43,46 @@ class database {
     $this->CerrarConexion();
   }
 
-  function buscar(){
-    $buscar = $_POST['buscar'];
-    $sql = $this->pdo->prepare("SELECT a.Nom_producto, a.Estilo, a.Acabado, a.Talla, a.Color, a.Stock FROM articulo AS a WHERE a.Nom_Producto LIKE '%".$buscar."%' ");
-    if ($sql->execute(array(1))) {
-      return $sql->fetchAll(PDO::FETCH_ASSOC);
+  function showAll(){
+    $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+      INNER JOIN tipo_linea AS tp
+      on p.Id_linea = tp.Id_linea
+      WHERE tp.Tipo_linea = 'Dama'");
+      if ($sql->execute(array(1))) {
+        return $sql->fetchAll(PDO::FETCH_ASSOC);
+      }
+      $this->CerrarConexion();
     }
-    $this->CerrarConexion();
-  }
 
-} 
+  function showBd(){
+    $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+      INNER JOIN tipo_linea AS tp
+      on p.Id_linea = tp.Id_linea
+      INNER JOIN categorias AS c
+      ON p.Id_categoria = c.Id_categoria
+      WHERE tp.Tipo_linea = 'Dama' AND c.Tipo_categoria = 'Botas'");
+      if ($sql->execute(array(1))) {
+        return $sql->fetchAll(PDO::FETCH_ASSOC);
+      }
+      $this->CerrarConexion();
+    }
+
+    function showBdId(){
+      $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+        WHERE p.Id_producto=".$_GET['modelo']);
+        if ($sql->execute(array(1))) {
+          return $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+        $this->CerrarConexion();
+      }
+
+    function buscar(){
+      $buscar = $_POST['buscar'];
+      $sql = $this->pdo->prepare("SELECT a.Nom_producto, a.Estilo, a.Acabado, a.Talla, a.Color, a.Stock FROM articulo AS a WHERE a.Nom_Producto LIKE '%".$buscar."%' ");
+      if ($sql->execute(array(1))) {
+        return $sql->fetchAll(PDO::FETCH_ASSOC);
+      }
+      $this->CerrarConexion();
+    }
+
+  }

@@ -149,6 +149,78 @@ class funciones {
     return $texto;
   }
 
+  public function showbd(){
+    //realiza la consulta
+    $con=$this->bd->showBd();
+    $texto='';
+    //recorre los datos
+    foreach ($con as $mostrar) {
+      $texto.='
+      <li class="item-prod">
+      <div class="img-prod">
+        <img src="img/'.$mostrar['Imagen'].'" alt="">
+      </div>
+      <div class="wrapper-prod">
+        <div class="name-shoe">
+          <span>'.$mostrar['Nom_producto'].'</span>
+        </div>
+        <div class="price-shoe">
+          <span>$'.$mostrar['Precio'].'.00</span>
+        </div>
+        <div class="ide-shoe">
+          <a id="active" href="detalles.php?modelo='.$mostrar['Id_producto'].'">Ver Detalles</a>
+        </div>
+      </div>
+      </li>';
+    }
+    return $texto;
+  }
+
+  public function showall(){
+    //realiza la consulta
+    $con=$this->bd->showAll();
+    $texto='';
+    //recorre los datos
+    foreach ($con as $mostrar) {
+      $texto.='
+      <li class="item-prod">
+      <div class="img-prod">
+        <img src="img/'.$mostrar['Imagen'].'" alt="">
+      </div>
+      <div class="wrapper-prod">
+        <div class="name-shoe">
+          <span>'.$mostrar['Nom_producto'].'</span>
+        </div>
+        <div class="price-shoe">
+          <span>$'.$mostrar['Precio'].'.00</span>
+        </div>
+        <div class="ide-shoe">
+          <a id="active" href="detalles.php?modelo='.$mostrar['Id_producto'].'">Ver Detalles</a>
+        </div>
+      </div>
+      </li>';
+    }
+    return $texto;
+  }
+
+
+  public function showImg(){
+    $con = $this->bd->showBdId();
+    $img='';
+    foreach ($con as $show) {
+      $img.='
+      <div class="container-img" id="img-small">
+        <div class="img-shoe">
+          <img src="img/'.$show['Imagen'].'" alt="">
+        </div>
+      </div>
+      <div class="img-full" id="img-full">
+        <img src="img/'.$show['Imagen'].'" alt="">
+      </div>';
+    }
+    return $img;
+  }
+
   public function Detalles(){
     //realiza la consulta
     $con=$this->bd->showDetails();

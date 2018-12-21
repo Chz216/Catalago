@@ -7,13 +7,13 @@ $function = new funciones();
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="css/car0.css">
-  <link rel="stylesheet" href="css/abt0.css">
+  <link rel="stylesheet" href="css/abt8.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@ $function = new funciones();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
   <script src="js/markerclusterer.js"></script>
-  <script src="js/maa.js"></script>
+  <script src="js/maps.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRa4ltVvE0m5WkyIj0y0EecJDwPkU2aOs&callback=initMap"></script>
   <script src="js/form.js"></script>
   <script type="text/javascript">

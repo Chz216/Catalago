@@ -59,6 +59,7 @@
   right: -20px;
 	cursor: pointer;
 }
+
 .close .fa-times:hover{
 	color: #fff;
 }
@@ -179,17 +180,25 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.container-fluid{
+.fadeInUp, .fadeInLeft{
+ 	animation-delay: 0.9s;
+}
+
+.fadeInRight, .fadeInDown{
+  	animation-delay: 1.5s;
+}
+
+.banner .container-fluid{
   width: 95%;
   margin-top: 25px;
 }
 
-h2{
-  font-size: 30px;
+.banner h2{
+  font-size: 28px;
   font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .media{
@@ -227,8 +236,8 @@ h2{
 
 .wrapper-bnr img{
   display:block;
-  width: 90%;
-  height: 70%;
+  width: 85%;
+  height: 90%;
   margin:0 auto;
 }
 
@@ -236,9 +245,9 @@ h2{
   display: block;
   width: 90%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Niramit', sans-serif;
 }
 
@@ -423,6 +432,15 @@ h4{
 }
 
 @media screen and (max-width: 575.98px) {
+  .wrapper-form{
+  	padding: 25px 25px;
+  }
+  .search-form .search-txt{
+  	width: 88%;
+  }
+  .close{
+    right: 20px;
+  }
   .carousel-item{
     width: 100%;
     height: 60vh;
@@ -437,8 +455,8 @@ h4{
   .wrapper-bnr img{
     height: 70%;
   }
-  h2{
-    font-size: 22px;
+  .banner h2{
+    font-size: 20px;
   }
   .wrapper-bnr span{
     font-size: 19px;

@@ -9,10 +9,10 @@ $function = new funciones();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>El Reventón</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/car0.css">
+  <link rel="stylesheet" href="css/style-reven.css">
   <link rel="stylesheet" href="css/abt8.css">
 </head>
 <body>
@@ -36,29 +36,12 @@ $function = new funciones();
   <script src="js/form.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
-    $('.icon-search').click(function() {
-      $('.search').slideToggle();
-    })
-    $('.close').click(function() {
-      $('.search').slideToggle();
-    });
-    $('#form').submit(function() {
-      var buscar = $('#search').val();
-      if (buscar == '') {
-        return false;
-      }else {
-        return true;
-      }
-    });
     $('.menu-toggle').click(function() {
       $('.navbar-default').toggleClass('right');
     });
     $('.nv-item').click(function() {
       $(this).siblings().removeClass('toggle');
       $(this).toggleClass('toggle');
-    });
-    $('.filter-box').click(function() {
-      $('.filters').toggleClass('toggle-box');
     });
   });
   </script>

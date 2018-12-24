@@ -13,7 +13,7 @@ $function = new funciones();
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/car0.css">
+  <link rel="stylesheet" href="css/style-reven.css">
   <link rel="stylesheet" href="css/prd0.css">
 </head>
 <body>
@@ -82,7 +82,7 @@ $function = new funciones();
       </div>
       <div class="col-right products">
         <ul class="content-prod">
-          <?php echo $function->showall() ?>
+          <?php echo $function->showall()?>
         </ul>
       </div>
     </div>

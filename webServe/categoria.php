@@ -82,12 +82,11 @@ $function = new funciones();
       </div>
       <div class="col-right products">
         <ul class="content-prod">
-          <?php echo $function->showall()?>
+          <?php echo $function->showallCatLin()?>
         </ul>
       </div>
     </div>
   </div>
-
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -95,20 +94,6 @@ $function = new funciones();
   <script src="js/form.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
-    $('.icon-search').click(function() {
-      $('.search').slideToggle();
-    })
-    $('.close').click(function() {
-      $('.search').slideToggle();
-    });
-    $('#form').submit(function() {
-      var buscar = $('#search').val();
-      if (buscar == '') {
-        return false;
-      }else {
-        return true;
-      }
-    });
     $('.menu-toggle').click(function() {
       $('.navbar-default').toggleClass('right');
     });
@@ -121,7 +106,7 @@ $function = new funciones();
     });
   });
   </script>
-<script type="text/javascript">
+  <script type="text/javascript">
   $(function() {
     $("#slider-range").slider({
       range: true,
@@ -135,7 +120,7 @@ $function = new funciones();
       }
     });
     $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
 </script>
 </body>

@@ -184,35 +184,37 @@ class funciones {
     }
   }
 
-  public function showImg(){
-    $con = $this->bd->showBdId();
-    $img='';
-    foreach ($con as $show) {
-      $img.='
-      <div class="container-img" id="img-small">
-      <div class="img-shoe">
-      <img src="img/'.$show['Imagen'].'" alt="">
-      </div>
-      </div>
-      <div class="img-full" id="img-full">
-      <img src="img/'.$show['Imagen'].'" alt="">
-      </div>';
-    }
-    return $img;
-  }
 
   public function Detalles(){
     //realiza la consulta
-    $con=$this->bd->showDetails();
+    $con=$this->bd->showBdId();
     $texto='';
     //recorre los datos
     foreach ($con as $mostrar) {
-      $texto.='<div class="details">
-      <h2>'.$mostrar['Estilo'].'</h2>
-      <center>
-      <img src="images/'.$mostrar['Imagen'].'" alt="">
-      </center>
-      <h2>'.$mostrar['Marca'].'</h2>
+      $texto.='
+      <h1 class="title-det">'.$mostrar['Nom_producto'].'</h1>
+      <div class="wrapper-img">
+        <div class="content-img-sm">
+          <div class="img-sm">
+            <img src="img/'.$mostrar['Imagen'].'" alt="">
+          </div>
+        </div>
+        <div class="content-img-lg">
+          <div class="img-lg"><img id="zoom_01" src="img/'.$mostrar['Imagen'].'" data-zoom-image="img/'.$mostrar['Imagen'].'" /></div>
+        </div>
+        <div class="content-img-sm-resp">
+          <div class="img-sm-resp"><img src="img/'.$mostrar['Imagen'].'" alt="" /></div>
+        </div>
+      </div>
+      <div class="content-desc">
+        <div class="wrapper-desc">
+          <div class="block-des"><p>'.$mostrar['Nom_producto'].'</p></div>
+          <div class="price"><p>$'.$mostrar['Precio'].'.00</p></div>
+          <div class="descr">
+            <strong>Descripción:</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nostrum delectus sed accusantium minima eius ducimus sit doloremque libero dolorum quis ullam at quae maiores ipsam dolore quas reprehenderit, animi!</p>
+          </div>
+        </div>
       </div>';
     }
     return $texto;

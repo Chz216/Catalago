@@ -61,11 +61,11 @@ $function = new funciones();
             <dt class="list-odd">Acabado</dt>
             <dd class="wrapper-odd">
               <ol class="list-acabado">
-                <li class="item-a"><a class="acabado">Piel</a></li>
-                <li class="item-a"><a class="acabado">Sintetico</a></li>
-                <li class="item-a"><a class="acabado">Felpa</a></li>
-                <li class="item-a"><a class="acabado">Durazno</a></li>
-                <li class="item-a"><a class="acabado">Charol</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=piel" class="acabado">Piel</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=sintetico" class="acabado">Sintetico</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=felpa" class="acabado">Felpa</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=durazno" class="acabado">Durazno</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=charol" class="acabado">Charol</a></li>
               </ol>
             </dd>
             <dt class="list-odd">Marca</dt>

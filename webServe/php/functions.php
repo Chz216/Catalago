@@ -160,7 +160,7 @@ class funciones {
       $categoria = $_GET['categoria'];
       $conn = $this->bd->showAllCatLin($tp_linea, $categoria);
       $texto='';
-    //recorre los datos
+      //recorre los datos
       foreach ($conn as $mostrar) {
         $texto.='
         <li class="item-prod">
@@ -184,7 +184,6 @@ class funciones {
     }
   }
 
-
   public function Detalles(){
     //realiza la consulta
     $con=$this->bd->showBdId();
@@ -194,29 +193,61 @@ class funciones {
       $texto.='
       <h1 class="title-det">'.$mostrar['Nom_producto'].'</h1>
       <div class="wrapper-img">
-        <div class="content-img-sm">
-          <div class="img-sm">
-            <img src="img/'.$mostrar['Imagen'].'" alt="">
-          </div>
-        </div>
-        <div class="content-img-lg">
-          <div class="img-lg"><img id="zoom_01" src="img/'.$mostrar['Imagen'].'" data-zoom-image="img/'.$mostrar['Imagen'].'" /></div>
-        </div>
-        <div class="content-img-sm-resp">
-          <div class="img-sm-resp"><img src="img/'.$mostrar['Imagen'].'" alt="" /></div>
-        </div>
+      <div class="content-img-sm">
+      <div class="img-sm">
+      <img src="img/'.$mostrar['Imagen'].'" alt="">
+      </div>
+      </div>
+      <div class="content-img-lg">
+      <div class="img-lg"><img id="zoom_01" src="img/'.$mostrar['Imagen'].'" data-zoom-image="img/'.$mostrar['Imagen'].'" /></div>
+      </div>
+      <div class="content-img-sm-resp">
+      <div class="img-sm-resp"><img src="img/'.$mostrar['Imagen'].'" alt="" /></div>
+      </div>
       </div>
       <div class="content-desc">
-        <div class="wrapper-desc">
-          <div class="block-des"><p>'.$mostrar['Nom_producto'].'</p></div>
-          <div class="price"><p>$'.$mostrar['Precio'].'.00</p></div>
-          <div class="descr">
-            <strong>Descripción:</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nostrum delectus sed accusantium minima eius ducimus sit doloremque libero dolorum quis ullam at quae maiores ipsam dolore quas reprehenderit, animi!</p>
-          </div>
-        </div>
+      <div class="wrapper-desc">
+      <div class="block-des"><p>'.$mostrar['Nom_producto'].'</p></div>
+      <div class="price"><p>$'.$mostrar['Precio'].'.00</p></div>
+      <div class="descr">
+      <strong>Descripción:</strong>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nostrum delectus sed accusantium minima eius ducimus sit doloremque libero dolorum quis ullam at quae maiores ipsam dolore quas reprehenderit, animi!</p>
+      </div>
+      </div>
       </div>';
     }
     return $texto;
   }
+
+  public function filter(){
+
+    if(isset($_GET['categoria'])){
+      $tp_linea = $_GET['tipo_linea'];
+      $categoria = $_GET['categoria'];
+      $acabado = $_GET['acabado'];
+      $buscar = $this->bd->filters($tp_linea, $categoria, $acabado);
+      $texto='';
+      foreach ($buscar as $bus){
+        $texto.='
+        <li class="item-prod">
+        <div class="img-prod">
+        <img src="img/'.$bus['Imagen'].'" alt="">
+        </div>
+        <div class="wrapper-prod">
+        <div class="name-shoe">
+        <span>'.$bus['Nom_producto'].'</span>
+        </div>
+        <div class="price-shoe">
+        <span>$'.$bus['Precio'].'.00</span>
+        </div>
+        <div class="ide-shoe">
+        <a id="active" href="detalles.php?modelo='.$bus['Id_producto'].'">Ver Detalles</a>
+        </div>
+        </div>
+        </li>';
+      }
+      return $texto;
+    }
+  }
+
 }

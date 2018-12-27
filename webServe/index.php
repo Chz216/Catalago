@@ -18,42 +18,42 @@ $function = new funciones();
 <body>
 
   <header>
-    <?php echo $function->menu() ?>
+    <?php echo $function->menu(); ?>
   </header>
 
   <div class="wrapper-carousel">
     <div id="carousel-slider" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="img/slider0.jpg" alt="First slide">
-        <div class="carousel-caption">
-          <h3 class="animated fadeInUp">Zapaterias El Reventón</h3>
-          <h5 class="animated fadeInRight">Donde Más Baratos Son...</h5>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/slider0.jpg" alt="First slide">
+          <div class="carousel-caption">
+            <h3 class="animated fadeInUp">Zapaterias El Reventón</h3>
+            <h5 class="animated fadeInRight">Donde Más Baratos Son...</h5>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/slider4.jpg" alt="Second slide">
-        <div class="carousel-caption">
-          <h3 class="animated fadeInLeft">Los Mejores Calzados</h3>
-          <h5 class="animated fadeInRight">Al Mejor Precio</h5>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slider4.jpg" alt="Second slide">
+          <div class="carousel-caption">
+            <h3 class="animated fadeInLeft">Los Mejores Calzados</h3>
+            <h5 class="animated fadeInRight">Al Mejor Precio</h5>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/slider3.jpg" alt="Third slide">
-        <div class="carousel-caption">
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slider3.jpg" alt="Third slide">
+          <div class="carousel-caption">
             <h3 class="animated fadeInLeft">La Mejor Calidad De Calzado</h3>
-          <h5 class="animated fadeInDown">Zapaterias El Reventón</h5>
+            <h5 class="animated fadeInDown">Zapaterias El Reventón</h5>
+          </div>
         </div>
       </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+      <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 

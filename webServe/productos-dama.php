@@ -1,4 +1,6 @@
 <?php
+$minimum_range = 50;
+$maximum_range = 350;
 include_once 'php/functions.php';
 $function = new funciones();
 ?>
@@ -35,8 +37,8 @@ $function = new funciones();
             <dd class="price">
               <p><span id="amount"></span></p>
               <div class="price-range" id="slider-range"></div>
-              <input class="slider-range" type="hidden" id="amount1">
-              <input class="slider-range" type="hidden" id="amount2">
+              <input class="slider-range" type="hidden" id="amount1" name="min">
+              <input class="slider-range" type="hidden" id="amount2" name="max">
             </dd>
             <dt class="list-odd">Talla</dt>
             <dd class="wrapper-odd">
@@ -61,11 +63,11 @@ $function = new funciones();
             <dt class="list-odd">Acabado</dt>
             <dd class="wrapper-odd">
               <ol class="list-acabado">
-                <li class="item-a"><a class="acabado">Piel</a></li>
-                <li class="item-a"><a class="acabado">Sintetico</a></li>
-                <li class="item-a"><a class="acabado">Felpa</a></li>
-                <li class="item-a"><a class="acabado">Durazno</a></li>
-                <li class="item-a"><a class="acabado">Charol</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=piel" class="acabado">Piel</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=sintetico" class="acabado">Sintetico</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=felpa" class="acabado">Felpa</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=durazno" class="acabado">Durazno</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=charol" class="acabado">Charol</a></li>
               </ol>
             </dd>
             <dt class="list-odd">Marca</dt>
@@ -100,14 +102,6 @@ $function = new funciones();
     $('.close').click(function() {
       $('.search').slideToggle();
     });
-    $('#form').submit(function() {
-      var buscar = $('#search').val();
-      if (buscar == '') {
-        return false;
-      }else {
-        return true;
-      }
-    });
     $('.menu-toggle').click(function() {
       $('.navbar-default').toggleClass('right');
     });
@@ -120,21 +114,37 @@ $function = new funciones();
     });
   });
   </script>
-<script type="text/javascript">
+  <script type="text/javascript">
   $(function() {
     $("#slider-range").slider({
       range: true,
-      min: 0,
+      min: 50,
       max: 350,
-      values: [ 0, 350 ],
+      values: [<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>],
       slide: function( event, ui ) {
         $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
         $( "#amount1" ).val(ui.values[ 0 ]);
         $( "#amount2" ).val(ui.values[ 1 ]);
+        load_product(ui.values[0], ui.values[1]);
       }
     });
     $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    " - $" + $( "#slider-range" ).slider( "values", 1 ));
+
+    load_product(<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>);
+
+    function load_product(minimum_range, maximum_range)
+    {
+      $.ajax({
+        url:"functions.php",
+        method:"POST",
+        data:{minimum_range:minimum_range, maximum_range:maximum_range},
+        success:function(data)
+        {
+          $('#content-prod').fadeIn('slow').html(data);
+        }
+      });
+    }
   });
 </script>
 </body>

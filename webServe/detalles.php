@@ -1,6 +1,6 @@
 <?php
 include_once 'php/functions.php';
-$function = new funciones();
+$funcion = new funciones();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,32 +11,31 @@ $function = new funciones();
   <title>El Reventón</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/style-reven.css">
-  <link rel="stylesheet" href="css/det011.css">
+  <link rel="stylesheet" href="css/style-main.css">
+  <link rel="stylesheet" href="css/details-products.css">
 </head>
 <body>
   <header>
-    <?php echo $function->menu(); ?>
+    <?php echo $funcion->menu(); ?>
   </header>
 
   <section class="details">
     <div class="container-fluid">
-      <?php echo $function->Detalles() ?>
+      <?php echo $funcion->Detalles() ?>
     </div>
   </section>
-
+<?php echo $funcion->footer(); ?>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="js/jquery.elevatezoom.min.js"></script>
+    <script src="js/form.js"></script>
     <script type="text/javascript">
     $("#zoom_01").elevateZoom({
       zoomWindowWidth : 450,
       zoomWindowHeight : 450,
     });
     </script>
-    <script src="js/form.js"></script>
-
     <script type="text/javascript">
     $(document).ready(function() {
       $('.icon-search').click(function() {
@@ -44,14 +43,6 @@ $function = new funciones();
       })
       $('.close').click(function() {
         $('.search').slideToggle();
-      });
-      $('#form').submit(function() {
-        var buscar = $('#search').val();
-        if (buscar == '') {
-          return false;
-        }else {
-          return true;
-        }
       });
       $('.menu-toggle').click(function() {
         $('.navbar-default').toggleClass('right');

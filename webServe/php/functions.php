@@ -97,6 +97,57 @@ class funciones {
     </div>';
   }
 
+  public function footer() {
+    echo'
+    <footer class="footer-classic">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-sm">
+          <div class="pr-xl-4">
+            <a class="brand"><img src="img/logo-tipo.png" alt=""></a>
+            <p>Somos una empresa competitiva dedicada a la venta de calzado de moda con los precios mas bajos, nos caracterizamos por Brindar la mejor atención y servicio a nuestros clientes.</p>
+            <!-- Rights-->
+            <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Comercializadora El Reventón</span><span>. </span><span>Derecho Reservados.</span></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm">
+          <h5>Contactanos</h5>
+          <dl class="contact-list">
+            <dt>Dirección:</dt>
+            <dd>Col.Centro Calle 3era Agustin A.Cacho #331</dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>e-mail:</dt>
+            <dd><a href="mailto:zapateriaselreventon@prodigy.net.mx">zapateriaselreventon@prodigy.net.mx</a></dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>Teléfono:</dt>
+            <dd><a href="tel:2383837595">+52 (238) 3837595</a><span></dd>
+          </dl>
+        </div>
+        <div class="col-md-4 col-sm">
+          <h5>Enlaces</h5>
+          <ul class="nav-list">
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="productos-dama.php?tipo_linea=dama">Dama</a></li>
+            <li><a href="productos-caballero.php?tipo_linea=caballero">Caballero</a></li>
+            <li><a href="productos-juvenil.php?tipo_linea=juvenil">Juvenil</a></li>
+            <li><a href="productos-ninos.php?tipo_linea=niños">Niños</a></li>
+            <li><a href="productos-ninas.php?tipo_linea=niñas">Niñas</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters social-container">
+      <div class="col"><a class="social-inner" href="https://www.facebook.com/zapateriaselreventon/"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+    </div>
+    </footer>';
+  }
+
+
   public function showPro(){
     if(isset($_POST['product'])){
       $product = $_POST['product'];

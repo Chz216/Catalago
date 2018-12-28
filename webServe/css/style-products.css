@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Niramit|Poppins|Varela Round|Yantramanav');
 
-
 .container-products{
   width: 100%;
   margin-top: 100px;
+  background-color: #004554;
 }
 
 .wrapper-col{
@@ -144,15 +144,12 @@
 }
 
 .filter-box{
-  width: 50%;
   padding: 2px 20px;
   color: #fff;
   font-size: 22px;
   font-family: 'Varela Round', sans-serif;
-  background-color: rgb(10,94,184);
   display: none;
   cursor: pointer;
-  border-radius: 5px;
 }
 
 .products{
@@ -219,6 +216,10 @@
   text-decoration: none;
   border-radius: 5px;
   background: rgb(10,45,210);
+}
+
+.clear{
+  clear: both;
 }
 
 @media screen and (max-width: 1199.98px) {

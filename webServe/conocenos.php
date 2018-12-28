@@ -1,6 +1,6 @@
 <?php
 include_once 'php/functions.php';
-$function = new funciones();
+$funcion = new funciones();
 ?>
 
 <!DOCTYPE html>
@@ -12,13 +12,13 @@ $function = new funciones();
   <title>El Reventón</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/style-reven.css">
-  <link rel="stylesheet" href="css/abt8.css">
+  <link rel="stylesheet" href="css/style-main.css">
+  <link rel="stylesheet" href="css/about-reven.css">
 </head>
 <body>
 
   <header>
-    <?php echo $function->menu(); ?>
+    <?php echo $funcion->menu(); ?>
   </header>
 
 <div class="container-map">
@@ -26,10 +26,10 @@ $function = new funciones();
   <div id="map"></div>
 </div>
 
+<?php echo $funcion->footer(); ?>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
   <script src="js/markerclusterer.js"></script>
   <script src="js/maps.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRa4ltVvE0m5WkyIj0y0EecJDwPkU2aOs&callback=initMap"></script>

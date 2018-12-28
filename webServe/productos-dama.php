@@ -1,8 +1,6 @@
 <?php
-$minimum_range = 50;
-$maximum_range = 350;
 include_once 'php/functions.php';
-$function = new funciones();
+$funcion = new funciones();
 ?>
 
 <!DOCTYPE html>
@@ -15,13 +13,13 @@ $function = new funciones();
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/style-reven.css">
-  <link rel="stylesheet" href="css/prd0.css">
+  <link rel="stylesheet" href="css/style-main.css">
+  <link rel="stylesheet" href="css/style-products.css">
 </head>
 <body>
 
   <header>
-    <?php echo $function->menu() ?>
+    <?php echo $funcion->menu() ?>
   </header>
 
   <div class="container-products">
@@ -84,11 +82,13 @@ $function = new funciones();
       </div>
       <div class="col-right products">
         <ul class="content-prod">
-          <?php echo $function->showall()?>
+          <?php echo $funcion->showall()?>
         </ul>
       </div>
     </div>
   </div>
+  <div class="clear"></div>
+  <?php echo $funcion->footer(); ?>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

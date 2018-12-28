@@ -1,6 +1,6 @@
 <?php
 include_once 'php/functions.php';
-$function = new funciones();
+$funcion = new funciones();
 ?>
 
 <!DOCTYPE html>
@@ -13,49 +13,50 @@ $function = new funciones();
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" href="css/style-reven.css">
+  <link rel="stylesheet" href="css/style-main.css">
 </head>
 <body>
-
   <header>
-    <?php echo $function->menu(); ?>
+    <?php echo $funcion->menu(); ?>
   </header>
 
-  <div class="wrapper-carousel">
-    <div id="carousel-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="img/slider0.jpg" alt="First slide">
-          <div class="carousel-caption">
-            <h3 class="animated fadeInUp">Zapaterias El Reventón</h3>
-            <h5 class="animated fadeInRight">Donde Más Baratos Son...</h5>
+  <section class="carousel">
+    <div class="wrapper-carousel">
+      <div id="carousel-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4500">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/slider.jpg" alt="First slide">
+            <div class="carousel-caption">
+              <h3 class="animated fadeInUp">Zapaterias El Reventón</h3>
+              <h5 class="animated fadeInRight">Donde Más Baratos Son...</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/slider4.jpg" alt="Second slide">
+            <div class="carousel-caption">
+              <h3 class="animated fadeInLeft">Los Mejores Calzados</h3>
+              <h5 class="animated fadeInRight">Al Mejor Precio</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/slider3.jpg" alt="Third slide">
+            <div class="carousel-caption">
+              <h3 class="animated fadeInLeft">La Mejor Calidad De Calzado</h3>
+              <h5 class="animated fadeInDown">Zapaterias El Reventón</h5>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="img/slider4.jpg" alt="Second slide">
-          <div class="carousel-caption">
-            <h3 class="animated fadeInLeft">Los Mejores Calzados</h3>
-            <h5 class="animated fadeInRight">Al Mejor Precio</h5>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="img/slider3.jpg" alt="Third slide">
-          <div class="carousel-caption">
-            <h3 class="animated fadeInLeft">La Mejor Calidad De Calzado</h3>
-            <h5 class="animated fadeInDown">Zapaterias El Reventón</h5>
-          </div>
-        </div>
+        <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-  </div>
+  </section>
 
   <section class="inf">
     <div class="container-fluid">
@@ -88,7 +89,7 @@ $function = new funciones();
               <i class="fa fa-paper-plane"></i>
             </div>
             <div class="media-body">
-              <h3 class="media-heading">Objetivo</h3>
+              <h3 class="media-heading">Objetivos</h3>
               <p>El objetivo del presente Manual es presentar la cultura organizacional de la empresa, precisando las funciones encomendadas al personal con el fin de evitar la repetición de instrucciones, para ahorrar tiempo y esfuerzos en la ejecución del trabajo.</p>
             </div>
           </div>
@@ -96,6 +97,7 @@ $function = new funciones();
       </div>
     </div>
   </section>
+
   <section class="banner">
     <div class="container-fluid">
       <h2>conoce más acerca de nosotros</h2>
@@ -121,6 +123,8 @@ $function = new funciones();
       </div>
     </div>
   </section>
+
+<?php echo $funcion->footer(); ?>
 
 </body>
 <script src="js/jquery.js"></script>

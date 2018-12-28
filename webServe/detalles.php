@@ -1,5 +1,5 @@
 <?php
-include_once 'php/functions.php';
+include_once 'funciones/logica.php';
 $funcion = new funciones();
 ?>
 <!DOCTYPE html>

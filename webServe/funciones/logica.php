@@ -1,6 +1,6 @@
 <?php
 
-include_once 'php/conexion.php';
+include_once 'funciones/conexion.php';
 
 class funciones {
 

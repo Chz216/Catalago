@@ -3,9 +3,9 @@
 class database {
   private $pdo;//variable para iniciar el pdo
   var $Host = "localhost";//nombre del host que se ocupara
-  var $BdName = "id8340243_catalago_reventon";//nombre de la base de datos
-  var $User = "id8340243_jlrm";//nombre del usuario
-  var $Password = "awdesq032018**";//la contraseña para acceder a la base
+  var $BdName = "catalago_reventon";//nombre de la base de datos
+  var $User = "root";//nombre del usuario
+  var $Password = "";//la contraseña para acceder a la base
 
   public function __construct() {
     try {
@@ -22,7 +22,7 @@ class database {
   }
 
   function showProduct($product){
-    $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+    $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
       WHERE p.Nom_producto LIKE '%".$product."%'");
       if ($sql->execute(array(1))) {
         return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -31,7 +31,7 @@ class database {
     }
 
     function showAll($linea){
-      $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+      $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
         INNER JOIN tipo_linea AS tp
         on p.Id_linea = tp.Id_linea
         WHERE tp.Tipo_linea LIKE '%".$linea."%'");
@@ -42,7 +42,7 @@ class database {
       }
 
       function showAllCatLin($tp_linea, $categoria){
-        $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+        $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
           INNER JOIN tipo_linea AS tp
           on p.Id_linea = tp.Id_linea
           INNER JOIN categorias AS c
@@ -55,7 +55,7 @@ class database {
         }
 
         function showBdId(){
-          $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+          $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
             WHERE p.Id_producto=".$_GET['modelo']);
             if ($sql->execute(array(1))) {
               return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -64,7 +64,7 @@ class database {
           }
 
           function filters($tp_linea, $categoria, $acabado){
-            $sql = $this->pdo->prepare("SELECT P.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+            $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
               INNER JOIN tipo_linea AS tp
               on p.Id_linea = tp.Id_linea
               INNER JOIN categorias AS c
@@ -76,29 +76,15 @@ class database {
               $this->CerrarConexion();
             }
 
-            function Navs(){
-              $sql = $this->pdo->prepare("SELECT nv.nav_link FROM navbar AS nv");
+            function showprice($min_price, $max_price){
+              $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
+                INNER JOIN tipo_linea AS tp
+                on p.Id_linea = tp.Id_linea
+                WHERE p.Precio BETWEEN '%".$min_price."%' AND '%".$max_price."%'");
                 if ($sql->execute(array(1))) {
                   return $sql->fetchAll(PDO::FETCH_ASSOC);
                 }
                 $this->CerrarConexion();
               }
 
-              function subNavs(){
-                $sql = $this->pdo->prepare("SELECT sub.Name_navLink FROM sub_nav AS sub
-                  INNER JOIN nav AS nv
-                  on sub.Id_nav = nv.Id_nav
-                  WHERE nv.Id_nav = nv.Id_nav");
-                  while ($sql->execute(array(1))) {
-                    return $sql->fetchAll(PDO::FETCH_ASSOC);
-                  }
-                  $this->CerrarConexion();
-                }
-
-                function registrarProducto($estilo, $acabado, $talla, $color, $stock, $nombre_img){
-                  //inserta una nueva afiliacion
-                  $sql = $this->pdo->prepare("INSERT INTO articulo(`Estilo`, `Acabado`, `Talla`, `Color`, `Stock`, `imagen`) VALUES ('{$_POST['estilo']}','{$_POST['acabado']}','{$_POST['talla']}','{$_POST['color']}','{$_POST['stock']}','$nombre_img')");
-                  $sql->execute(array($estilo, $acabado, $talla, $color, $stock, $nombre_img));
-                }
-
-              }
+            }

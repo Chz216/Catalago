@@ -121,7 +121,7 @@ $funcion = new funciones();
   $(function() {
     $("#slider-range").slider({
       range: true,
-      min: 0,
+      min: 50,
       max: 350,
       values: [ 0, 350 ],
       slide: function( event, ui ) {

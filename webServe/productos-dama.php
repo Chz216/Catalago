@@ -33,10 +33,11 @@ $funcion = new funciones();
           <dl>
             <dt class="list-odd">Precio</dt>
             <dd class="price">
-              <p><span id="amount"></span></p>
-              <div class="price-range" id="slider-range"></div>
-              <input class="slider-range" type="hidden" id="amount1" name="min">
-              <input class="slider-range" type="hidden" id="amount2" name="max">
+              <p>
+                <label for="amount">Price range:</label>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+              </p>
+              <div id="slider-range"></div>
             </dd>
             <dt class="list-odd">Talla</dt>
             <dd class="wrapper-odd">
@@ -82,7 +83,8 @@ $funcion = new funciones();
       </div>
       <div class="col-right products">
         <ul class="content-prod">
-          <?php echo $funcion->showall()?>
+          <?php echo $funcion->showAll(); ?>
+          <?php echo $funcion->price(); ?>
         </ul>
       </div>
     </div>
@@ -92,7 +94,7 @@ $funcion = new funciones();
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script src="js/jquery-ui.js"></script>
   <script src="js/form.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
@@ -120,31 +122,36 @@ $funcion = new funciones();
       range: true,
       min: 50,
       max: 350,
-      values: [<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>],
+      values: [ 50, 350],
       slide: function( event, ui ) {
-        $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-        $( "#amount1" ).val(ui.values[ 0 ]);
-        $( "#amount2" ).val(ui.values[ 1 ]);
-        load_product(ui.values[0], ui.values[1]);
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
       }
     });
-    $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
     " - $" + $( "#slider-range" ).slider( "values", 1 ));
 
-    load_product(<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>);
+    var loader="<img src='img/loader.gif'/>";
 
-    function load_product(minimum_range, maximum_range)
-    {
+    $('.ui-slider-handle').on('click',function(){
+      $('.content-prod').html(loader);
+
+      var min_price=$( "#slider-range" ).slider( "values", 0 );
+      var max_price=$( "#slider-range" ).slider( "values", 1 );
+
+      var qs="min_price="+min_price+"&max_price="+max_price;
+      //alert(ctr_id);
+
       $.ajax({
-        url:"functions.php",
-        method:"POST",
-        data:{minimum_range:minimum_range, maximum_range:maximum_range},
-        success:function(data)
-        {
-          $('#content-prod').fadeIn('slow').html(data);
+        url:'funciones/logica.php',
+        type:'POST',
+        data:qs,
+        success:function(output){
+          $('.content-prod').fadeOut('slow',function(){
+            $('.content-prod').html(output).fadeIn('fast');
+          });
         }
       });
-    }
+    });
   });
 </script>
 </body>

@@ -34,7 +34,6 @@ $funcion = new funciones();
             <dt class="list-odd">Precio</dt>
             <dd class="price">
               <p>
-                <label for="amount">Price range:</label>
                 <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
               </p>
               <div id="slider-range"></div>
@@ -84,7 +83,7 @@ $funcion = new funciones();
       <div class="col-right products">
         <ul class="content-prod">
           <?php echo $funcion->showAll(); ?>
-          <?php echo $funcion->price(); ?>
+          <?php echo $funcion->output(); ?>
         </ul>
       </div>
     </div>
@@ -143,7 +142,7 @@ $funcion = new funciones();
 
       $.ajax({
         url:'funciones/logica.php',
-        type:'POST',
+        type:'GET',
         data:qs,
         success:function(output){
           $('.content-prod').fadeOut('slow',function(){

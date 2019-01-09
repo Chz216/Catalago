@@ -301,12 +301,12 @@ class funciones {
     }
   }
 
-  public function price(){
+  public function output(){
 
-      $min_price = $_POST['min_price'];
-      $max_price = $_POST['max_price'];
+      $min_price= $_GET["min_price"];
+      $max_price= $_GET["max_price"];
 
-      $conn=$this->bd->showprice($min_price, $max_price);
+      $conn=$this->bd->showprice($min_price,$max_price);
       $printer = '';
       foreach ($conn as $con) {
         $printer.='

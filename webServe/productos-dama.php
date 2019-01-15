@@ -34,7 +34,7 @@ $funcion = new funciones();
             <dt class="list-odd">Precio</dt>
             <dd class="price">
               <p>
-                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="price">
               </p>
               <div id="slider-range"></div>
             </dd>
@@ -82,8 +82,7 @@ $funcion = new funciones();
       </div>
       <div class="col-right products">
         <ul class="content-prod">
-          <?php echo $funcion->showAll(); ?>
-          <?php echo $funcion->output(); ?>
+          <div id="get_products"></div>
         </ul>
       </div>
     </div>
@@ -95,6 +94,7 @@ $funcion = new funciones();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/filter.js" charset="utf-8"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     $('.icon-search').click(function() {
@@ -140,10 +140,10 @@ $funcion = new funciones();
       var qs="min_price="+min_price+"&max_price="+max_price;
       //alert(ctr_id);
 
-      $.ajax({
-        url:'funciones/logica.php',
+      var ajax= $.ajax({
         type:'GET',
         data:qs,
+        url:'funciones/logica.php',
         success:function(output){
           $('.content-prod').fadeOut('slow',function(){
             $('.content-prod').html(output).fadeIn('fast');

@@ -21,6 +21,14 @@ class database {
     $this->pdo = null;
   }
 
+  function showCategories(){
+    $sql = $this->pdo->prepare("SELECT * FROM categorias");
+      if ($sql->execute(array(1))) {
+        return $sql->fetchAll(PDO::FETCH_ASSOC);
+      }
+      $this->CerrarConexion();
+    }
+
   function showProduct($product){
     $sql = $this->pdo->prepare("SELECT p.Id_producto, p.Nom_producto, p.Precio, p.Imagen FROM productos AS p
       WHERE p.Nom_producto LIKE '%".$product."%'");

@@ -25,7 +25,7 @@ class funciones {
     <ul class="navbar-nv">
     <li class="nv-item"><a href="index.php" class="nv-link">Inicio</a></li>
     <li class="nv-item i-down">
-    <a href="productos-dama.php?tipo_linea=dama" class="nv-link">Dama</a>
+    <a href="productos-dama.php" class="nv-link">Dama</a>
     <ul class="sub-nav">
     <li class="sub-item"><a href="categoria.php?tipo_linea=dama&categoria=zapatos" class="sub-link">Zapatos</a></li>
     <li class="sub-item"><a href="categoria.php?tipo_linea=dama&categoria=balerinas" class="sub-link">Balerinas</a></li>
@@ -97,6 +97,8 @@ class funciones {
     </div>';
   }
 
+
+
   public function footer() {
     echo'
     <footer class="footer-classic">
@@ -147,6 +149,18 @@ class funciones {
     </footer>';
   }
 
+  public function clientes(){
+    if (isset($_POST['category'])) {
+      $conexion = $this->bd->showCategories();
+      $printer = '';
+      foreach ($conexion as $conn) {
+        $printer.='
+          <li><a class="type_client" href="#">'.$conn['Tipo_categoria'].'</a></li>
+        ';
+      }
+      return $printer;
+    }
+  }
 
   public function showPro(){
     if(isset($_POST['product'])){
@@ -302,32 +316,32 @@ class funciones {
   }
 
   public function output(){
-
-      $min_price= $_GET["min_price"];
-      $max_price= $_GET["max_price"];
-
-      $conn=$this->bd->showprice($min_price,$max_price);
-      $printer = '';
-      foreach ($conn as $con) {
-        $printer.='
-        <li class="item-prod">
-        <div class="img-prod">
-        <img src="img/'.$con['Imagen'].'" alt="">
-        </div>
-        <div class="wrapper-prod">
-        <div class="name-shoe">
-        <span>'.$con['Nom_producto'].'</span>
-        </div>
-        <div class="price-shoe">
-        <span>$'.$con['Precio'].'.00</span>
-        </div>
-        <div class="ide-shoe">
-        <a id="active" href="detalles.php?modelo='.$con['Id_producto'].'">Ver Detalles</a>
-        </div>
-        </div>
-        </li>';
+      if (isset($_GET['price'])) {
+        $min_price= $_GET['min_price'];
+        $max_price= $_GET['max_price'];
+        $conn=$this->bd->showprice($min_price,$max_price);
+        $printer = '';
+        foreach ($conn as $con) {
+          $printer.='
+          <li class="item-prod">
+          <div class="img-prod">
+          <img src="img/'.$con['Imagen'].'" alt="">
+          </div>
+          <div class="wrapper-prod">
+          <div class="name-shoe">
+          <span>'.$con['Nom_producto'].'</span>
+          </div>
+          <div class="price-shoe">
+          <span>$'.$con['Precio'].'.00</span>
+          </div>
+          <div class="ide-shoe">
+          <a id="active" href="detalles.php?modelo='.$con['Id_producto'].'">Ver Detalles</a>
+          </div>
+          </div>
+          </li>';
+        }
+        return $printer;
       }
-      return $printer;
   }
 
 }

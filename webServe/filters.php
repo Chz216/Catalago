@@ -1,125 +1,156 @@
 <?php
-include_once 'funciones/logic.php';
+include_once 'funciones/logica.php';
 $funcion = new funciones();
-$minimum_range = 100;
-$maximum_range = 450;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>El Reventón</title>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <style>
-  #loading
-  {
-    text-align:center;
-    background: url('loader.gif') no-repeat center;
-    height: 150px;
-  }
-</style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="css/style-main.css">
+  <link rel="stylesheet" href="css/style-products.css">
 </head>
 <body>
 
-  <div class="container">
-    <div class="row">
-      <br />
-      <h2 align="center">Advance Ajax Product Filters in PHP</h2>
-      <br />
-      <div class="col-md-8">
-        <div class="list-group">
-          <h3>Price</h3>
-          <input type="hidden" id="hidden_minimum_price" value="0" />
-          <input type="hidden" id="hidden_maximum_price" value="65000" />
-          <p id="price_show">1000 - 65000</p>
-          <div id="price_range"></div>
-        </div>
-        <div class="list-group">
-          <h3>Brand</h3>
-          <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
-            <?php echo $funcion->brand();?>
-          </div>
-        </div>
+  <header>
+    <?php echo $funcion->menu() ?>
+  </header>
 
-        <div class="list-group">
-          <h3>RAM</h3>
-          <?php echo $funcion->ram();?>
+  <div class="container-products">
+    <div class="wrapper-col">
+      <div class="filter-box"><strong><span>Filtros</span></strong></div>
+      <div class="col-left filters">
+        <div class="block-title">
+          <strong><span>Filtros</span></strong>
         </div>
-
-        <div class="list-group">
-          <h3>Internal Storage</h3>
-          <?php echo $funcion->internal();?>
+        <div class="block-filters">
+          <dl>
+            <dt class="list-odd">Precio</dt>
+            <dd class="price">
+              <p>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" name="price">
+              </p>
+              <div id="slider-range"></div>
+            </dd>
+            <dt class="list-odd">Talla</dt>
+            <dd class="wrapper-odd">
+              <ol class="list-tallas">
+                <li class="item-t"><a href="#" class="talla">22</a></li>
+                <li class="item-t"><a href="#" class="talla">23</a></li>
+                <li class="item-t"><a href="#" class="talla">24</a></li>
+                <li class="item-t"><a href="#" class="talla">25</a></li>
+                <li class="item-t"><a href="#" class="talla">26</a></li>
+              </ol>
+            </dd>
+            <dt class="list-odd">Color</dt>
+            <dd class="wrapper-odd">
+              <ol class="list-colors">
+                <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                <li class="item-c"><a href="#" class="color" href="#"></a></li>
+              </ol>
+            </dd>
+            <dt class="list-odd">Acabado</dt>
+            <dd class="wrapper-odd">
+              <ol class="list-acabado">
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=piel" class="acabado">Piel</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=sintetico" class="acabado">Sintetico</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=felpa" class="acabado">Felpa</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=durazno" class="acabado">Durazno</a></li>
+                <li class="item-a"><a href="productos-dama.php?tipo_linea=dama&categoria=botas&acabado=charol" class="acabado">Charol</a></li>
+              </ol>
+            </dd>
+            <dt class="list-odd">Marca</dt>
+            <dd class="wrapper-odd">
+              <ol class="list-marcas">
+                <li class="item-m"><a class="marca">Sheras</a></li>
+                <li class="item-m"><a class="marca">Michelle</a></li>
+                <li class="item-m"><a class="marca">Ternura</a></li>
+                <li class="item-m"><a class="marca">Fani Alma</a></li>
+              </ol>
+            </dd>
+          </dl>
         </div>
       </div>
-
-      <div class="col-md-9">
-        <br />
-        <div class="row filter_data">
-          <?php echo $funcion->products() ?>
-        </div>
+      <div class="col-right products">
+        <ul class="content-prod">
+          <div id="get_products"></div>
+        </ul>
       </div>
     </div>
-
   </div>
-
-</body>
-<script src="js/jquery.js" charset="utf-8"></script>
-<script src="js/bootstrap.js" charset="utf-8"></script>
-<script src="js/jquery-ui.js" charset="utf-8"></script>
-<script>
-$(document).ready(function(){
-    filter_data();
-    function filter_data()
-    {
-        $('.filter_data').html('<div id="loading" style="" ></div>');
-        var action = 'logic';
-        var minimum_price = $('#hidden_minimum_price').val();
-        var maximum_price = $('#hidden_maximum_price').val();
-        var brand = get_filter('brand');
-        var ram = get_filter('ram');
-        var storage = get_filter('storage');
-        $.ajax({
-            url:"logic.php",
-            method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
-            success:function(data){
-                $('.filter_data').html(data);
-            }
-        });
-    }
-
-    function get_filter(class_name)
-    {
-        var filter = [];
-        $('.'+class_name+':checked').each(function(){
-            filter.push($(this).val());
-        });
-        return filter;
-    }
-
-    $('.common_selector').click(function(){
-        filter_data();
+  <div class="clear"></div>
+  <?php echo $funcion->footer(); ?>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/filter.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('.icon-search').click(function() {
+      $('.search').slideToggle();
+    })
+    $('.close').click(function() {
+      $('.search').slideToggle();
     });
+    $('.menu-toggle').click(function() {
+      $('.navbar-default').toggleClass('right');
+    });
+    $('.nv-item').click(function() {
+      $(this).siblings().removeClass('toggle');
+      $(this).toggleClass('toggle');
+    });
+    $('.filter-box').click(function() {
+      $('.filters').toggleClass('toggle-box');
+    });
+  });
+  </script>
+  <script type="text/javascript">
+  $(function() {
+    $("#slider-range").slider({
+      range: true,
+      min: 50,
+      max: 350,
+      values: [ 50, 350],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    " - $" + $( "#slider-range" ).slider( "values", 1 ));
 
-    $('#price_range').slider({
-        range:true,
-        min:1000,
-        max:65000,
-        values:[1000, 65000],
-        step:500,
-        stop:function(event, ui)
-        {
-            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
-            $('#hidden_minimum_price').val(ui.values[0]);
-            $('#hidden_maximum_price').val(ui.values[1]);
-            filter_data();
+    var loader="<img src='img/loader.gif'/>";
+
+    $('.ui-slider-handle').on('click',function(){
+      $('.content-prod').html(loader);
+
+      var min_price=$( "#slider-range" ).slider( "values", 0 );
+      var max_price=$( "#slider-range" ).slider( "values", 1 );
+
+      var qs="min_price="+min_price+"&max_price="+max_price;
+      //alert(ctr_id);
+
+      var ajax= $.ajax({
+        type:'GET',
+        data:qs,
+        url:'funciones/logica.php',
+        success:function(output){
+          $('.content-prod').fadeOut('slow',function(){
+            $('.content-prod').html(output).fadeIn('fast');
+          });
         }
+      });
     });
-
-});
+  });
 </script>
+</body>
 </html>

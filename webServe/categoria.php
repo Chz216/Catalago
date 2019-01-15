@@ -81,9 +81,7 @@ $funcion = new funciones();
         </div>
       </div>
       <div class="col-right products">
-        <ul class="content-prod">
-          <?php echo $funcion->showallCatLin()?>
-        </ul>
+          <div id="get_pro"></div>
       </div>
     </div>
   </div>
@@ -94,6 +92,7 @@ $funcion = new funciones();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/filter.js" charset="utf-8"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     $('.menu-toggle').click(function() {

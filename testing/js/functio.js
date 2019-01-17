@@ -10,7 +10,7 @@ $(document).ready(function() {
       }
     });
   }
-
+  
   $('body').delegate('.nav-link','click',function(event) {
       event.preventDefault();
       var cid = $(this).attr('cid');

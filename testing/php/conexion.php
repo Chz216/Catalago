@@ -1,9 +1,9 @@
-<?php
+  <?php
 
   $Host = 'localhost';
   $User = 'root';
   $Password = '';
-  $BdName = 'catalogue_reventon';
+  $BdName = 'catalago_reventon';
 
   $conn = mysqli_connect ($Host, $User, $Password, $BdName);
 

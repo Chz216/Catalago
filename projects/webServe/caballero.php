@@ -47,73 +47,78 @@ $controller = new Controller();
     </div>
   </header>
 
-  <div class="container-products">
-    <div class="wrapper-col">
-      <div class="filter-box"><strong><span>Filtros</span></strong></div>
-      <div class="col-left filters">
-        <div class="block-title">
-          <strong><span>Filtros</span></strong>
+  <section class="wrapper-products">
+    <div class="container-products">
+      <div class="wrapper-col">
+        <div class="filter-box"><strong><span>Filtros</span></strong></div>
+        <div class="col-left filters">
+          <div class="block-title">
+            <strong><span>Filtros</span></strong>
+          </div>
+          <div class="block-filters">
+            <dl>
+              <dt class="list-odd">Precio</dt>
+              <dd class="price">
+                <p><span id="amount"></span></p>
+                <div class="price-range" id="slider-range"></div>
+                <input class="slider-range" type="hidden" id="amount1">
+                <input class="slider-range" type="hidden" id="amount2">
+              </dd>
+              <dt class="list-odd">Talla</dt>
+              <dd class="wrapper-odd">
+                <ol class="list-tallas">
+                  <li class="item-t"><a href="#" class="talla">22</a></li>
+                  <li class="item-t"><a href="#" class="talla">23</a></li>
+                  <li class="item-t"><a href="#" class="talla">24</a></li>
+                  <li class="item-t"><a href="#" class="talla">25</a></li>
+                  <li class="item-t"><a href="#" class="talla">26</a></li>
+                </ol>
+              </dd>
+              <dt class="list-odd">Color</dt>
+              <dd class="wrapper-odd">
+                <ol class="list-colors">
+                  <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                  <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                  <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                  <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                  <li class="item-c"><a href="#" class="color" href="#"></a></li>
+                </ol>
+              </dd>
+              <dt class="list-odd">Acabado</dt>
+              <dd class="wrapper-odd">
+                <ol class="list-acabado">
+                  <li class="item-a"><a class="acabado">Piel</a></li>
+                  <li class="item-a"><a class="acabado">Sintetico</a></li>
+                  <li class="item-a"><a class="acabado">Felpa</a></li>
+                  <li class="item-a"><a class="acabado">Durazno</a></li>
+                  <li class="item-a"><a class="acabado">Charol</a></li>
+                </ol>
+              </dd>
+              <dt class="list-odd">Marca</dt>
+              <dd class="wrapper-odd">
+                <ol class="list-marcas">
+                  <li class="item-m"><a class="marca">Sheras</a></li>
+                  <li class="item-m"><a class="marca">Michelle</a></li>
+                  <li class="item-m"><a class="marca">Ternura</a></li>
+                  <li class="item-m"><a class="marca">Fani Alma</a></li>
+                </ol>
+              </dd>
+            </dl>
+          </div>
         </div>
-        <div class="block-filters">
-          <dl>
-            <dt class="list-odd">Precio</dt>
-            <dd class="price">
-              <p><span id="amount"></span></p>
-              <div class="price-range" id="slider-range"></div>
-              <input class="slider-range" type="hidden" id="amount1">
-              <input class="slider-range" type="hidden" id="amount2">
-            </dd>
-            <dt class="list-odd">Talla</dt>
-            <dd class="wrapper-odd">
-              <ol class="list-tallas">
-                <li class="item-t"><a href="#" class="talla">22</a></li>
-                <li class="item-t"><a href="#" class="talla">23</a></li>
-                <li class="item-t"><a href="#" class="talla">24</a></li>
-                <li class="item-t"><a href="#" class="talla">25</a></li>
-                <li class="item-t"><a href="#" class="talla">26</a></li>
-              </ol>
-            </dd>
-            <dt class="list-odd">Color</dt>
-            <dd class="wrapper-odd">
-              <ol class="list-colors">
-                <li class="item-c"><a href="#" class="color" href="#"></a></li>
-                <li class="item-c"><a href="#" class="color" href="#"></a></li>
-                <li class="item-c"><a href="#" class="color" href="#"></a></li>
-                <li class="item-c"><a href="#" class="color" href="#"></a></li>
-                <li class="item-c"><a href="#" class="color" href="#"></a></li>
-              </ol>
-            </dd>
-            <dt class="list-odd">Acabado</dt>
-            <dd class="wrapper-odd">
-              <ol class="list-acabado">
-                <li class="item-a"><a class="acabado">Piel</a></li>
-                <li class="item-a"><a class="acabado">Sintetico</a></li>
-                <li class="item-a"><a class="acabado">Felpa</a></li>
-                <li class="item-a"><a class="acabado">Durazno</a></li>
-                <li class="item-a"><a class="acabado">Charol</a></li>
-              </ol>
-            </dd>
-            <dt class="list-odd">Marca</dt>
-            <dd class="wrapper-odd">
-              <ol class="list-marcas">
-                <li class="item-m"><a class="marca">Sheras</a></li>
-                <li class="item-m"><a class="marca">Michelle</a></li>
-                <li class="item-m"><a class="marca">Ternura</a></li>
-                <li class="item-m"><a class="marca">Fani Alma</a></li>
-              </ol>
-            </dd>
-          </dl>
+        <div class="col-right products">
+          <ul class="content-prod">
+            <?php echo $controller->showall() ?>
+          </ul>
         </div>
-      </div>
-      <div class="col-right products">
-        <ul class="content-prod">
-          <?php echo $funcion->showPro()?>
-        </ul>
       </div>
     </div>
-  </div>
+  </section>
+
   <div class="clear"></div>
-<?php echo $funcion->footer(); ?>
+
+  <?php echo $controller->Footer();?>
+
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -143,7 +148,7 @@ $controller = new Controller();
   $(function() {
     $("#slider-range").slider({
       range: true,
-      min: 0,
+      min: 50,
       max: 350,
       values: [ 0, 350 ],
       slide: function( event, ui ) {

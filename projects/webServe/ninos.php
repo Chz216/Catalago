@@ -107,54 +107,57 @@ $controller = new Controller();
       </div>
       <div class="col-right products">
         <ul class="content-prod">
-          <?php echo $funcion->showPro()?>
+          <?php echo $controller->showall() ?>
         </ul>
       </div>
     </div>
   </div>
+
   <div class="clear"></div>
-<?php echo $funcion->footer(); ?>
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
-  <script src="js/form.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-    $('.icon-search').click(function() {
-      $('.search').slideToggle();
-    })
-    $('.close').click(function() {
-      $('.search').slideToggle();
-    });
-    $('.menu-toggle').click(function() {
-      $('.navbar-default').toggleClass('right');
-    });
-    $('.nv-item').click(function() {
-      $(this).siblings().removeClass('toggle');
-      $(this).toggleClass('toggle');
-    });
-    $('.filter-box').click(function() {
-      $('.filters').toggleClass('toggle-box');
-    });
-  });
-  </script>
-<script type="text/javascript">
-  $(function() {
-    $("#slider-range").slider({
-      range: true,
-      min: 0,
-      max: 350,
-      values: [ 0, 350 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-        $( "#amount1" ).val(ui.values[ 0 ]);
-        $( "#amount2" ).val(ui.values[ 1 ]);
-      }
-    });
-    $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-  });
-</script>
+
+  <?php echo $controller->Footer(); ?>
+
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script src="js/form.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.icon-search').click(function() {
+    $('.search').slideToggle();
+  })
+  $('.close').click(function() {
+    $('.search').slideToggle();
+  });
+  $('.menu-toggle').click(function() {
+    $('.navbar-default').toggleClass('right');
+  });
+  $('.nv-item').click(function() {
+    $(this).siblings().removeClass('toggle');
+    $(this).toggleClass('toggle');
+  });
+  $('.filter-box').click(function() {
+    $('.filters').toggleClass('toggle-box');
+  });
+});
+</script>
+<script type="text/javascript">
+$(function() {
+  $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 350,
+    values: [ 0, 350 ],
+    slide: function( event, ui ) {
+      $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      $( "#amount1" ).val(ui.values[ 0 ]);
+      $( "#amount2" ).val(ui.values[ 1 ]);
+    }
+  });
+  $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+   " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+});
+</script>
 </html>
